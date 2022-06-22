@@ -81,6 +81,11 @@ textarea {
     height: 15px;
     border: 1px solid var(--main-text-color);
 }
+input[type="checkbox"] {
+    background: #212121;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);   
+}
 /* END COMMON STYLES */
 /* START MODAL WINDOW STYLE */
 .backdrop {
@@ -165,6 +170,7 @@ textarea {
     position: absolute;
     top: 50%;
     left: 15px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 .order-question + .order-question {
     margin-top: 10px;
@@ -172,21 +178,8 @@ textarea {
 .order-question > input {
     padding-left: 42px;
 }
-.order-comments:hover,
-.order-comments:focus,
-.order-comments:active,
-.input-form:hover,
-.input-form:focus,
-.input-form:active {
-    color:var(--activity-color);
-    border: 1px solid var(--activity-color);
-}
-.input-form:hover ~ .form-icon,
-.input-form:focus ~ .form-icon,
-.input-form:active ~ .form-icon {
-    fill: var(--activity-color);
-}
 .agreement {
+    position: relative;
     margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
@@ -205,6 +198,24 @@ textarea {
     margin: 0 auto;
     padding: 0;
 } 
+.input-form,
+.order-comments {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-icon-container {
+        position: absolute;
+        top: 0;
+        left: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 16px;
+        background: var(--activity-color);
+        border-radius: 2px; 
+        transform: scale(0);
+    }
 /* END MODAL WINDOW STYLE */
 /* START HEADER STYLE*/
 .page-header,
@@ -565,6 +576,12 @@ textarea {
     height: 24px;
     fill: var(--page-color);
 }
+.icon-checkmark {
+    width: 11px;
+    height: 8px;
+    background: var(--activity-color);
+    border-radius: 2px; 
+}
 /* END OUR CLIENTS */
 /* START FOOTER STYLE */
 footer {
@@ -827,6 +844,26 @@ p.name-project {
 .close-backdrop:focus .icon-vector{
     fill:var(--activity-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-question > .order-comments:hover,
+.order-question > .order-comments:focus,
+.order-question > .order-comments:active,
+.input-form:hover,
+.input-form:focus,
+.input-form:active {
+    color:var(--activity-color);
+    border: 1px solid var(--activity-color);
+}
+.input-form:hover ~ .form-icon,
+.input-form:focus ~ .form-icon,
+.input-form:active ~ .form-icon {
+    fill: var(--activity-color);
+}
+input[type="checkbox"]:checked + .checkbox-icon-container {
+transform: scale(1);
+}
+input[type="checkbox"]:checked {
+    transform: scale(0);
 }
 /* END ACTIONS STYLES  */
 /* START ANIMATION */
