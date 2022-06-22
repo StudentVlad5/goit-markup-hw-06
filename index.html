@@ -31,7 +31,7 @@
                     <form class="order-form" autocomplete="on">    
                         <div class="order-question">
                             <label class="question-label" for="user-name">Имя</label>
-                            <input class="input-form" type="text" name="user-name" id="user-name" placeholder=" " focused />
+                            <input class="input-form" type="text" name="user-name" id="user-name" placeholder=" " />
                             <svg class="icon icon-man form-icon">
                                 <use href="./images/icons/icon.svg#icon-man"></use>
                             </svg>
@@ -51,17 +51,17 @@
                             </svg>
                         </div>
                         <div class="order-question">
-                            <label class="question-label" for="">Комментарий</label>
-                            <textarea class="order-comments" name="comments" placeholder="Введите текст" rows="7"></textarea>
+                            <label class="question-label" for="comments">Комментарий</label>
+                            <textarea class="order-comments" id="comments" name="comments" placeholder="Введите текст" rows="7"></textarea>
                         </div>
                         <div class="agreement">
-                            <label class="question-label" for="agreement">
+                            <label class="question-label">
                                 <input class="style-checkbox" type="checkbox" id="agreement" value="agree with contract" />
-                                    <div class="checkbox-icon-container">
+                                    <span class="checkbox-icon-container">
                                         <svg class="icon icon-checkmark"> 
                                             <use href="images/icons/icon.svg#icon-checkmark"></use>
                                         </svg>
-                                    </div>
+                                    </span>
                             Соглашаюсь с рассылкой и принимаю <a href="" target="_blank" rel="noopener nofollow noreferrer">
                                 <span class="link-contract-conditions">Условия договора</span></a></label>
                         </div>
