@@ -18,5 +18,6 @@
   "singleAttributePerLine": false,
   "htmlWhitespaceSensitivity": "css",
   "trailingSlash": "never",
-  "parser": "html"
+  "parser": "html",
+  "editor.formatOnSave": true
 }
