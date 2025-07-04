@@ -282,6 +282,9 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+    .main-nav .logo {
+    margin-right: 120px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
